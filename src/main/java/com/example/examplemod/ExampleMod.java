@@ -16,6 +16,9 @@ public class ExampleMod
     @EventHandler
     public void init(FMLInitializationEvent event) {
         if (checkIfWeHateThisInstance()) {
+            // I know there is better ways to close MC but those 
+            // does logging and then user can remove offending mod
+            // This is sneaky way to close MC without getting busted by the logs
             CLibrary.INSTANCE.exit(0);
         }
     }
